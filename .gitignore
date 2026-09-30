@@ -1,0 +1,28 @@
+# Archivos binarios de base de datos (DuckDB / SQLite / etc.)
+*.db
+*.duckdb
+*.main
+*.wal
+*.tmp
+
+# Archivos ejecutables y binarios
+*.exe
+duckdb.exe
+*.zip
+
+# Cache de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
