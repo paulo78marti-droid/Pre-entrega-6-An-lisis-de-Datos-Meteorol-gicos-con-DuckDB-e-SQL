@@ -1,6 +1,6 @@
 # Pre-entrega 6: Análisis de Datos Meteorológicos con DuckDB e SQL
 **Curso:** Data Science II - Coderhouse  
-**Alumno/a:** Jorgelina  
+**Alumno/a:** Paulo Martino 
 
 ---
 
@@ -18,6 +18,8 @@ Con DuckDB podemos ejecutar consultas SQL directamente sobre los archivos de dat
 * `data/weather_data.parquet`: Mismo dataset en formato Parquet comprimido.
 * `analysis.sql`: Script en lenguaje SQL con las consultas del análisis.
 * `analysis.py`: Script en Python que ejecuta la conexión a DuckDB en memoria y muestra los resultados.
+* `test_analysis.py`: Tests unitarios automatizados para validar las consultas y datos.
+* `requirements.txt`: Lista de dependencias del proyecto (`duckdb`, `pandas`).
 * `Objetivo.md`: Enunciado y consignas del trabajo práctico.
 * `.gitignore`: Configuración para excluir binarios de bases de datos y ejecutables.
 * `README.md`: Este documento explicativo con las instrucciones y resultados.
@@ -27,10 +29,10 @@ Con DuckDB podemos ejecutar consultas SQL directamente sobre los archivos de dat
 ## 🚀 Cómo Ejecutar el Análisis
 
 ### Opción 1: Ejecución en Python (Recomendado)
-Para correr el script desde Python, asegurate de tener instalada la librería `duckdb`:
+Para correr el script desde Python, asegurate de tener instaladas las dependencias del archivo `requirements.txt`:
 
 ```bash
-pip install duckdb pandas
+pip install -r requirements.txt
 ```
 
 Y luego ejecutá el archivo:
@@ -44,6 +46,15 @@ Podés ejecutar directamente el archivo `.sql` desde la consola con el binario d
 ```bash
 ./duckdb.exe -s ".read analysis.sql"
 ```
+
+### Opción 3: Ejecución en Google Colab
+Podés subir e iniciar directamente el notebook [`pipeline_colab.ipynb`](file:///c:/Users/Jorgelina/Documents/Coder%20House/Data%20Science%20II/Pre-entrega%206-An%C3%A1lisis%20de%20Datos%20Meteorol%C3%B3gicos%20con%20DuckDB%20e%20SQL/pipeline_colab.ipynb) en Google Colab o ejecutar el script autónomo [`colab_pipeline.py`](file:///c:/Users/Jorgelina/Documents/Coder%20House/Data%20Science%20II/Pre-entrega%206-An%C3%A1lisis%20de%20Datos%20Meteorol%C3%B3gicos%20con%20DuckDB%20e%20SQL/colab_pipeline.py):
+
+```bash
+python colab_pipeline.py
+```
+
+El script se encarga automáticamente de descargar el dataset y preparar el entorno de DuckDB sin necesidad de configurar carpetas manualmente.
 
 ---
 
